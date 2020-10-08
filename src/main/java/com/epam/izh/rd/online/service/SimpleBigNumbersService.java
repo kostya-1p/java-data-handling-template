@@ -28,6 +28,10 @@ public class SimpleBigNumbersService implements BigNumbersService {
      */
     @Override
     public BigInteger getPrimaryNumber(int range) {
-        return null;
+        BigInteger primary = BigInteger.valueOf(2);
+        for (int i = 0; i < range; i++) {
+            primary = primary.nextProbablePrime();
+        }
+        return primary;
     }
 }
