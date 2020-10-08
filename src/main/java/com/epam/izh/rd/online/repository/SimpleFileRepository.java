@@ -86,6 +86,7 @@ public class SimpleFileRepository implements FileRepository {
     @Override
     public boolean createFile(String path, String name) {
         File file = new File("./src/main/resources/" + path);
+
         if (file.isFile())
             return false;
 
